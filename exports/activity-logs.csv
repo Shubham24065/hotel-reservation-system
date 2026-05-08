@@ -1,0 +1,6 @@
+Timestamp,Actor,Action,Entity Type,Entity Identifier,Message
+2026-04-03T15:16:05.610440,aaaaaaaa dddddddddddd,CREATE_RESERVATION,Reservation,RSV-202604031516-0946,Reservation created successfully.
+2026-04-03T15:16:43.149827,admin,LOGIN_SUCCESS,AdminUser,admin,Admin logged in successfully.
+2026-04-03T15:17:28.650167,admin,PROCESS_PAYMENT,Reservation,RSV-202604031516-0946,Payment processed: 2359.44 via CARD
+2026-04-03T15:17:39.922920,admin,CHECKOUT,Reservation,RSV-202604031516-0946,Guest checked out successfully.
+2026-04-03T15:17:52.602288,admin,APPLY_DISCOUNT,Reservation,RSV-202604031516-0946,Applied discount: 10.0%.

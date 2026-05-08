@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="700.0" prefWidth="950.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.controller.AdminDashboardController">
+    <top>
+        <VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="78.0" styleClass="header-bar">
+                <padding><Insets left="18.0" right="18.0" /></padding>
+                <children>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label styleClass="header-title" text="Grand Stay Hotel" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button mnemonicParsing="false" onAction="#handleLogout" styleClass="dark-button" text="Log Out" />
+                </children>
+            </HBox>
+            <Separator />
+        </VBox>
+    </top>
+
+    <left>
+        <VBox prefWidth="215.0" spacing="16.0" styleClass="side-panel">
+            <padding><Insets bottom="18.0" left="10.0" right="10.0" top="24.0" /></padding>
+            <children>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openReservations" styleClass="dark-button" text="Reservations" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openGuests" styleClass="dark-button" text="Guests" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openPayments" styleClass="dark-button" text="Payments" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openReports" styleClass="dark-button" text="Reports" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openFeedback" styleClass="dark-button" text="Feedback" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openLoyalty" styleClass="dark-button" text="Loyalty" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openWaitlist" styleClass="dark-button" text="Waitlist" />
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="18.0" styleClass="content-panel">
+            <padding><Insets bottom="24.0" left="24.0" right="24.0" top="24.0" /></padding>
+            <children>
+                <Label styleClass="screen-title" text="Admin Dashboard" />
+                <Label fx:id="welcomeLabel" styleClass="subtitle" text="Logged in" />
+                <GridPane hgap="14.0" vgap="14.0">
+                    <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSearchReservation" styleClass="primary-button" text="Search Reservation" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleModifyBooking" styleClass="primary-button" text="View Reservation" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleProcessPayment" styleClass="primary-button" text="Process Payment" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCheckoutGuest" styleClass="primary-button" text="Check-out Guest" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleApplyDiscount" styleClass="primary-button" text="Apply Discount" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleViewReports" styleClass="primary-button" text="Export Reports" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+                <HBox spacing="12.0" styleClass="form-card">
+                    <padding><Insets bottom="16.0" left="16.0" right="16.0" top="16.0" /></padding>
+                    <children>
+                        <TextField fx:id="searchField" promptText="Search by reservation code, guest name, phone..." HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#handleFind" styleClass="secondary-button" text="Find" />
+                    </children>
+                </HBox>
+                <TableView fx:id="reservationTable" prefHeight="360.0" styleClass="table-card">
+                    <columns>
+                        <TableColumn fx:id="codeColumn" prefWidth="200.0" text="Reservation Code" />
+                        <TableColumn fx:id="guestColumn" prefWidth="220.0" text="Guest" />
+                        <TableColumn fx:id="statusColumn" prefWidth="180.0" text="Status" />
+                        <TableColumn fx:id="amountColumn" prefWidth="180.0" text="Outstanding" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox>
+            <Separator />
+            <HBox alignment="CENTER_LEFT" prefHeight="58.0" styleClass="footer-bar">
+                <padding><Insets left="18.0" right="18.0" /></padding>
+                <children>
+                    <Label fx:id="footerDateTimeLabel" styleClass="footer-text" text="Loading date and time..." />
+                </children>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

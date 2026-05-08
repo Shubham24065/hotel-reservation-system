@@ -1,0 +1,115 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #f5f5f5;
+}
+
+.header-bar, .footer-bar {
+    -fx-background-color: #f2f2f2;
+}
+
+.header-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f2f2f;
+}
+
+.side-panel {
+    -fx-background-color: #f8f8f8;
+}
+
+.side-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.content-panel {
+    -fx-background-color: #fafafa;
+}
+
+.screen-title {
+    -fx-font-size: 30px;
+    -fx-text-fill: #333333;
+}
+
+.subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #555555;
+}
+
+.step-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+}
+
+.info-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #444444;
+    -fx-max-width: 700px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.placeholder-rect {
+    -fx-fill: #dddddd;
+    -fx-stroke: #c5c5c5;
+}
+
+.placeholder-text {
+    -fx-font-size: 18px;
+    -fx-text-fill: #666666;
+}
+
+.primary-button, .dark-button, .secondary-button, .danger-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 12 18 12 18;
+    -fx-text-fill: white;
+}
+
+.primary-button, .dark-button {
+    -fx-background-color: #4a4a4a;
+}
+
+.secondary-button {
+    -fx-background-color: #6a6a6a;
+}
+
+.danger-button {
+    -fx-background-color: #555555;
+}
+
+.form-card, .summary-pill, .table-card, .image-placeholder {
+    -fx-background-color: white;
+    -fx-border-color: #cfcfcf;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.pill-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.inline-hint {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}
+
+.grand-total {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.footer-text {
+    -fx-font-size: 15px;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.text-field, .text-area, .date-picker, .combo-box, .spinner {
+    -fx-pref-height: 38px;
+}
